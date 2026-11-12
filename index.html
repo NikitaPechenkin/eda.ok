@@ -16,6 +16,7 @@
             --border: #2C2C2C;
             --text-main: #FFFFFF;
             --text-muted: #9E9E9E;
+            --max-color: #8B5CF6;
         }
 
         * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
@@ -104,95 +105,57 @@
 
         /* --- ЗАГОЛОВКИ СЕКЦИЙ --- */
         .section-title {
-            font-size: 20px;
-            font-weight: 800;
-            color: #fff;
-            margin: 30px 0 15px 0;
-            padding-bottom: 10px;
+            font-size: 20px; font-weight: 800; color: #fff;
+            margin: 30px 0 15px 0; padding-bottom: 10px;
             border-bottom: 1px solid var(--border);
         }
         .section-title:first-child { margin-top: 0; }
 
         /* --- МАКЕТ --- */
         .main-layout {
-            max-width: 1400px;
-            margin: 0 auto;
+            max-width: 1400px; margin: 0 auto;
             padding: 130px 20px 40px;
-            display: grid;
-            grid-template-columns: 1fr 380px;
-            gap: 30px;
-            align-items: start;
+            display: grid; grid-template-columns: 1fr 380px;
+            gap: 30px; align-items: start;
         }
 
         /* --- СЕТКА ТОВАРОВ --- */
         .menu-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-            gap: 20px;
-            align-items: stretch;
+            gap: 20px; align-items: stretch;
         }
 
         .product-card {
-            background: var(--dark-card);
-            border-radius: 16px;
-            overflow: hidden;
-            cursor: pointer;
-            transition: 0.2s;
-            border: 1px solid transparent;
-            display: flex;
-            flex-direction: column;
+            background: var(--dark-card); border-radius: 16px;
+            overflow: hidden; cursor: pointer; transition: 0.2s;
+            border: 1px solid transparent; display: flex; flex-direction: column;
         }
         .product-card:hover { border-color: var(--orange); transform: translateY(-3px); }
         .product-card:active { transform: scale(0.98); }
 
         .product-image {
-            width: 100%;
-            height: 160px;
-            background: #2A2A2A;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #555;
-            font-size: 12px;
-            flex-shrink: 0;
+            width: 100%; height: 160px; background: #2A2A2A;
+            display: flex; align-items: center; justify-content: center;
+            color: #555; font-size: 12px; flex-shrink: 0;
         }
         .product-image img { width: 100%; height: 100%; object-fit: cover; }
 
-        .product-body {
-            padding: 16px;
-            display: flex;
-            flex-direction: column;
-            flex: 1;
-        }
+        .product-body { padding: 16px; display: flex; flex-direction: column; flex: 1; }
 
         .product-name {
-            font-weight: 800;
-            font-size: 15px;
-            line-height: 1.3;
-            margin-bottom: 6px;
-            display: -webkit-box;
-            -webkit-line-clamp: 2;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
+            font-weight: 800; font-size: 15px; line-height: 1.3; margin-bottom: 6px;
+            display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
         }
 
         .product-desc-short {
-            font-size: 12px;
-            color: var(--text-muted);
-            line-height: 1.4;
-            margin-bottom: 12px;
-            display: -webkit-box;
-            -webkit-line-clamp: 2;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
+            font-size: 12px; color: var(--text-muted); line-height: 1.4; margin-bottom: 12px;
+            display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
         }
 
         .product-footer {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-top: auto;
-            padding-top: 10px;
+            display: flex; justify-content: space-between; align-items: center;
+            margin-top: auto; padding-top: 10px;
         }
 
         .product-price { font-weight: 900; font-size: 18px; color: var(--orange); }
@@ -207,15 +170,9 @@
 
         /* --- КОРЗИНА --- */
         .sidebar-cart {
-            background: var(--dark-card);
-            border-radius: 20px;
-            padding: 24px;
-            position: sticky;
-            top: 130px;
-            max-height: calc(100vh - 160px);
-            display: flex;
-            flex-direction: column;
-            border: 1px solid var(--border);
+            background: var(--dark-card); border-radius: 20px; padding: 24px;
+            position: sticky; top: 130px; max-height: calc(100vh - 160px);
+            display: flex; flex-direction: column; border: 1px solid var(--border);
         }
 
         .sidebar-title {
@@ -223,9 +180,7 @@
             padding-bottom: 12px; border-bottom: 1px solid var(--border);
         }
 
-        .cart-items-scroll {
-            overflow-y: auto; flex: 1; padding-right: 5px; margin-bottom: 16px;
-        }
+        .cart-items-scroll { overflow-y: auto; flex: 1; padding-right: 5px; margin-bottom: 16px; }
         .cart-items-scroll::-webkit-scrollbar { width: 4px; }
         .cart-items-scroll::-webkit-scrollbar-thumb { background: var(--border); border-radius: 10px; }
 
@@ -267,11 +222,11 @@
         .checkout-form input:focus { outline: none; border-color: var(--orange); }
 
         .checkout-btn {
-            background: var(--orange); color: #000; border: none;
+            background: var(--max-color); color: #fff; border: none;
             padding: 14px; border-radius: 12px; font-weight: 900; font-size: 14px;
             text-transform: uppercase; cursor: pointer; width: 100%; transition: 0.2s;
         }
-        .checkout-btn:hover { background: var(--orange-hover); }
+        .checkout-btn:hover { background: #7C3AED; }
 
         .empty-state { color: var(--text-muted); font-size: 13px; text-align: center; padding: 30px 0; }
 
@@ -295,15 +250,17 @@
             background: var(--dark); border: none; width: 34px; height: 34px;
             border-radius: 50%; color: var(--text-muted); font-size: 16px;
             cursor: pointer; display: flex; justify-content: center; align-items: center;
+            z-index: 10;
         }
         .close-btn:hover { color: #fff; }
 
         .modal-image {
-            width: 100%; height: 200px; background: #2A2A2A;
+            width: 100%; height: 220px; background: #2A2A2A;
             border-radius: 12px; margin-bottom: 16px;
             display: flex; align-items: center; justify-content: center; color: #555;
+            overflow: hidden;
         }
-        .modal-image img { width: 100%; height: 100%; object-fit: cover; border-radius: 12px; }
+        .modal-image img { width: 100%; height: 100%; object-fit: cover; }
 
         .modal-title { font-size: 22px; font-weight: 900; margin-bottom: 10px; }
         .modal-desc { font-size: 14px; color: var(--text-muted); line-height: 1.6; margin-bottom: 20px; }
@@ -361,40 +318,26 @@
 </head>
 <body>
 
-    <!-- ВЕРХНЯЯ ПОЛОСКА -->
     <div class="top-bar">
         <span>📍 Город: <strong>Москва</strong></span>
         <span>📞 <a href="tel:+79999999999">+7 (999) 999-99-99</a></span>
     </div>
 
-    <!-- ШАПКА -->
     <header>
         <div class="header-inner">
-            
-            <!-- БЛОК ЛОГОТИПА -->
             <div class="logo-box">
-                
-                <!-- СЮДА ВСТАВЬ СВОЁ ФОТО (замени logo.png на имя своего файла) -->
-                <img src="product1.jpg" alt="ЁДОК" class="logo-img" onerror="this.style.display='none'; document.getElementById('fallbackLogo').style.display='flex';">
-                
-                <!-- Запасной вариант, если фото не загрузилось (не трогай) -->
+                <!-- СЮДА ВСТАВЬ СВОЁ ФОТО -->
+                <img src="logo.png" alt="ЁДОК" class="logo-img" onerror="this.style.display='none'; document.getElementById('fallbackLogo').style.display='flex';">
                 <div id="fallbackLogo" class="logo-fallback">ЁДОК</div>
-                
                 <div class="brand">ЁДОК<span>.</span></div>
             </div>
             
-            <!-- ПРАВАЯ ЧАСТЬ: ТЕЛЕФОН И КОРЗИНА -->
             <div class="header-right">
-                
-                <!-- Телефон (замени +7 (999) 999-99-99 и tel:+79999999999 на свой) -->
                 <a href="tel:+79999999999" class="header-phone">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="var(--orange)">
-                        <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
-                    </svg>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="var(--orange)"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
                     +7 (999) 999-99-99
                 </a>
                 
-                <!-- Кнопка корзины (появляется только на телефоне) -->
                 <button class="mobile-cart-btn" onclick="toggleMobileCart()">
                     🛒 <span id="mobileCartCount">0</span> ₽
                 </button>
@@ -402,7 +345,6 @@
         </div>
     </header>
 
-    <!-- КАТЕГОРИИ -->
     <div class="categories-bar">
         <span class="cat-chip active" onclick="filterCategory('all', this)">Основное</span>
         <span class="cat-chip" onclick="filterCategory('ГИРО И РОЛЛЫ', this)">Гиро</span>
@@ -410,9 +352,7 @@
         <span class="cat-chip" onclick="filterCategory('БОКСЫ И САЛАТЫ', this)">Салаты</span>
     </div>
 
-    <!-- МАКЕТ -->
     <div class="main-layout">
-        
         <div class="menu-section">
             <div id="menu-container"></div>
         </div>
@@ -435,12 +375,11 @@
                     <input type="text" id="customerName" placeholder="Ваше имя">
                     <input type="text" id="customerAddress" placeholder="Адрес доставки">
                 </div>
-                <button class="checkout-btn" onclick="checkout()">Оформить заказ</button>
+                <button class="checkout-btn" onclick="checkout()">Оформить заказ в MAX</button>
             </div>
         </div>
     </div>
 
-    <!-- МОДАЛКА -->
     <div class="modal-overlay" id="productModal" onclick="closeModal(event)">
         <div class="bottom-sheet" onclick="event.stopPropagation()">
             <button class="close-btn" onclick="closeModal()">✕</button>
@@ -462,37 +401,37 @@
                 category: "ГИРО И РОЛЛЫ",
                 items: [
                     { id: 1, name: "ГИРО ОТ ШЕФА", desc: "Пита, помидоры, куриное филе, картофель фри, сыр сулугуни, халапеньо, свежий лук, зелень, фирменный соус", price: 430, image: "product1.jpg" },
-                    { id: 2, name: "ТОРТИЛЬЯ ОТ ШЕФА", desc: "Тортилья, помидоры, куриное филе, картофель фри, сыр сулугуни, халапеньо, свежий лук, зелень, фирменный соус", price: 430, image: "product1.jpg" },
-                    { id: 3, name: "ГИРО", desc: "Пита, помидоры, куриное филе, картофель фри, соус", price: 330, image: "product1.jpg" },
-                    { id: 4, name: "ГИРО В ТОРТИЛЬЕ", desc: "Тортилья, помидоры, куриное филе, картофель фри, соус", price: 330, image: "product1.jpg" },
-                    { id: 5, name: "ГИРО НА ТАРЕЛКЕ", desc: "Пита, куриное филе, помидоры, свежий огурец, халапеньо, свежий лук, картофель фри, два фирменных соуса", price: 430, image: "product1.jpg" },
-                    { id: 6, name: "ГИРО С КРЕВЕТКАМИ", desc: "Пита, креветки, помидоры, шпинат, свежие огурцы, сулугуни, картофель фри, соус", price: 460, image: "product1.jpg" },
-                    { id: 7, name: "ГИРО СТЕЙК", desc: "Пита, 4 куриных наггетса, пекинская капуста, помидоры, соус", price: 290, image: "product1.jpg" },
-                    { id: 8, name: "ГИРО ОВОЩНОЙ", desc: "Пита, помидоры, свежий огурец, пекинская капуста, картофель фри, соус", price: 280, image: "product1.jpg" },
-                    { id: 9, name: "СЛАДКИЙ ГИРО", desc: "Пита, овощной плов, банан", price: 230, image: "product1.jpg" },
-                    { id: 10, name: "ЦЕЗАРЬ РОЛЛ", desc: "Тортилья, 4 куриных наггетса, листья айсберга, помидоры, плавленый сыр, соус", price: 300, image: "product1.jpg" },
-                    { id: 11, name: "ЦЕЗАРЬ РОЛЛ С КРЕВЕТКАМИ", desc: "Тортилья, креветки, плавленый сыр, помидоры, свежий огурец, шпинат, соус", price: 340, image: "product1.jpg" },
-                    { id: 12, name: "ПИТА В СЫРОМ СУЛУГУНИ", desc: "Пита, сыр сулугуни", price: 200, image: "product1.jpg" }
+                    { id: 2, name: "ТОРТИЛЬЯ ОТ ШЕФА", desc: "Тортилья, помидоры, куриное филе, картофель фри, сыр сулугуни, халапеньо, свежий лук, зелень, фирменный соус", price: 430, image: "product2.jpg" },
+                    { id: 3, name: "ГИРО", desc: "Пита, помидоры, куриное филе, картофель фри, соус", price: 330, image: "product3.jpg" },
+                    { id: 4, name: "ГИРО В ТОРТИЛЬЕ", desc: "Тортилья, помидоры, куриное филе, картофель фри, соус", price: 330, image: "product4.jpg" },
+                    { id: 5, name: "ГИРО НА ТАРЕЛКЕ", desc: "Пита, куриное филе, помидоры, свежий огурец, халапеньо, свежий лук, картофель фри, два фирменных соуса", price: 430, image: "product5.jpg" },
+                    { id: 6, name: "ГИРО С КРЕВЕТКАМИ", desc: "Пита, креветки, помидоры, шпинат, свежие огурцы, сулугуни, картофель фри, соус", price: 460, image: "product6.jpg" },
+                    { id: 7, name: "ГИРО СТЕЙК", desc: "Пита, 4 куриных наггетса, пекинская капуста, помидоры, соус", price: 290, image: "product7.jpg" },
+                    { id: 8, name: "ГИРО ОВОЩНОЙ", desc: "Пита, помидоры, свежий огурец, пекинская капуста, картофель фри, соус", price: 280, image: "product8.jpg" },
+                    { id: 9, name: "СЛАДКИЙ ГИРО", desc: "Пита, овощной плов, банан", price: 230, image: "product9.jpg" },
+                    { id: 10, name: "ЦЕЗАРЬ РОЛЛ", desc: "Тортилья, 4 куриных наггетса, листья айсберга, помидоры, плавленый сыр, соус", price: 300, image: "product10.jpg" },
+                    { id: 11, name: "ЦЕЗАРЬ РОЛЛ С КРЕВЕТКАМИ", desc: "Тортилья, креветки, плавленый сыр, помидоры, свежий огурец, шпинат, соус", price: 340, image: "product11.jpg" },
+                    { id: 12, name: "ПИТА В СЫРОМ СУЛУГУНИ", desc: "Пита, сыр сулугуни", price: 200, image: "product12.jpg" }
                 ]
             },
             {
                 category: "ЗАКУСКИ И ФРИ",
                 items: [
-                    { id: 13, name: "ФРИ (150г)", desc: "Хрустящий картофель фри", price: 190, image: "product1.jpg" },
-                    { id: 14, name: "ФРИ ОТ ШЕФА (150г)", desc: "Картофель фри с фирменными специями", price: 200, image: "product1.jpg" },
-                    { id: 15, name: "КАРТОФЕЛЬ ПО-ДЕРЕВЕНСКИ (170г)", desc: "Картофель с пряными травами", price: 200, image: "product1.jpg" },
-                    { id: 16, name: "НАГГЕТСЫ (7ШТ) С ФРИ (150ГР)", desc: "Куриные наггетсы и картофель фри", price: 390, image: "product1.jpg" },
-                    { id: 17, name: "НАГГЕТСЫ (7ШТ)", desc: "Куриные наггетсы", price: 300, image: "product1.jpg" },
-                    { id: 18, name: "СЫРНЫЕ ПОДУШКИ (7ШТ)", desc: "Хрустящие сырные подушечки", price: 300, image: "product1.jpg" },
-                    { id: 19, name: "КРЕВЕТКИ (7/9/11 ШТ)", desc: "Обжаренные креветки в панировке", price: 380, image: "product1.jpg" }
+                    { id: 13, name: "ФРИ (150г)", desc: "Хрустящий картофель фри", price: 190, image: "product13.jpg" },
+                    { id: 14, name: "ФРИ ОТ ШЕФА (150г)", desc: "Картофель фри с фирменными специями", price: 200, image: "product14.jpg" },
+                    { id: 15, name: "КАРТОФЕЛЬ ПО-ДЕРЕВЕНСКИ (170г)", desc: "Картофель с пряными травами", price: 200, image: "product15.jpg" },
+                    { id: 16, name: "НАГГЕТСЫ (7ШТ) С ФРИ (150ГР)", desc: "Куриные наггетсы и картофель фри", price: 390, image: "product16.jpg" },
+                    { id: 17, name: "НАГГЕТСЫ (7ШТ)", desc: "Куриные наггетсы", price: 300, image: "product17.jpg" },
+                    { id: 18, name: "СЫРНЫЕ ПОДУШКИ (7ШТ)", desc: "Хрустящие сырные подушечки", price: 300, image: "product18.jpg" },
+                    { id: 19, name: "КРЕВЕТКИ (7/9/11 ШТ)", desc: "Обжаренные креветки в панировке", price: 380, image: "product19.jpg" }
                 ]
             },
             {
                 category: "БОКСЫ И САЛАТЫ",
                 items: [
-                    { id: 20, name: "ШЕФ БОКС", desc: "Фри от Шефа, наггетсы, сыр сулугуни, халапеньо, зелень, соус на выбор", price: 430, image: "product1.jpg" },
-                    { id: 21, name: "ОВОЩНОЙ САЛАТ", desc: "Томаты, свежий огурец, пекинская капуста, заправка - оливковое масло", price: 220, image: "product1.jpg" },
-                    { id: 22, name: "ЦЕЗАРЬ САЛАТ", desc: "Пекин, куриное филе, сухари кукурузные, микс салатов, заправка на чесночном соусе, сыр Сулугуни", price: 300, image: "product1.jpg" }
+                    { id: 20, name: "ШЕФ БОКС", desc: "Фри от Шефа, наггетсы, сыр сулугуни, халапеньо, зелень, соус на выбор", price: 430, image: "product20.jpg" },
+                    { id: 21, name: "ОВОЩНОЙ САЛАТ", desc: "Томаты, свежий огурец, пекинская капуста, заправка - оливковое масло", price: 220, image: "product21.jpg" },
+                    { id: 22, name: "ЦЕЗАРЬ САЛАТ", desc: "Пекин, куриное филе, сухари кукурузные, микс салатов, заправка на чесночном соусе, сыр Сулугуни", price: 300, image: "product22.jpg" }
                 ]
             }
         ];
@@ -505,10 +444,8 @@
             let html = '';
 
             menuData.forEach(cat => {
-                // Если выбран фильтр и он не совпадает с категорией - пропускаем
                 if (filter !== 'all' && cat.category !== filter) return;
                 
-                // Если выбран "all" (Основное), выводим заголовок категории
                 if (filter === 'all') {
                     html += `<div class="section-title">${cat.category}</div>`;
                 }
@@ -518,7 +455,7 @@
                     html += `
                         <div class="product-card" onclick="openModal(${item.id})">
                             <div class="product-image">
-                                ${item.image ? `<img src="${item.image}" alt="${item.name}" onerror="this.style.display='none'; this.parentElement.innerHTML='<span>Фото блюда</span>';">` : `<span>Фото блюда</span>`}
+                                <img src="${item.image}" alt="${item.name}" onerror="this.style.display='none'; this.parentElement.innerHTML='<span>Фото блюда</span>';">
                             </div>
                             <div class="product-body">
                                 <div class="product-name">${item.name}</div>
@@ -556,11 +493,7 @@
             document.getElementById('modalPrice').innerText = product.price + " ₽";
             
             const modalImg = document.getElementById('modalImage');
-            if (product.image) {
-                modalImg.innerHTML = `<img src="${product.image}" alt="${product.name}" onerror="this.style.display='none'; this.parentElement.innerHTML='<span>Фото блюда</span>';">`;
-            } else {
-                modalImg.innerHTML = `<span>Фото блюда</span>`;
-            }
+            modalImg.innerHTML = `<img src="${product.image}" alt="${product.name}" onerror="this.style.display='none'; this.parentElement.innerHTML='<span>Фото блюда</span>';">`;
             
             document.getElementById('productModal').style.display = 'flex';
             document.body.style.overflow = 'hidden';
@@ -638,28 +571,38 @@
         }
 
         function checkout() {
-            const name = document.getElementById('customerName').value.trim();
-            const address = document.getElementById('customerAddress').value.trim();
+    const name = document.getElementById('customerName').value.trim();
+    const address = document.getElementById('customerAddress').value.trim();
 
-            if (!name || !address) {
-                alert("Пожалуйста, заполните имя и адрес доставки.");
-                return;
-            }
+    if (!name || !address) {
+        alert("Пожалуйста, заполните имя и адрес доставки.");
+        return;
+    }
 
-            const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
-            
-            let message = `🔥 *НОВЫЙ ЗАКАЗ* 🔥\n\n`;
-            message += `👤 *Клиент:* ${name}\n`;
-            message += `📍 *Адрес:* ${address}\n\n`;
-            message += `🛒 *Состав заказа:*\n`;
-            cart.forEach(item => {
-                message += `▪ ${item.name} x${item.quantity} = ${item.price * item.quantity} ₽\n`;
-            });
-            message += `\n💰 *ИТОГО К ОПЛАТЕ:* ${total} ₽`;
+    const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+    
+    let message = `🔥 *НОВЫЙ ЗАКАЗ* 🔥\n\n`;
+    message += `👤 *Клиент:* ${name}\n`;
+    message += `📍 *Адрес:* ${address}\n\n`;
+    message += `🛒 *Состав заказа:*\n`;
+    cart.forEach(item => {
+        message += `▪ ${item.name} x${item.quantity} = ${item.price * item.quantity} ₽\n`;
+    });
+    message += `\n💰 *ИТОГО К ОПЛАТЕ:* ${total} ₽`;
 
-            const phone = "79999999999"; // ЗАМЕНИ НА СВОЙ
-            window.open(`https://wa.me/${phone}?text=${encodeURIComponent(message)}`, '_blank');
-        }
+    // 1. Копируем текст в буфер обмена
+    navigator.clipboard.writeText(message).then(() => {
+        // 2. Показываем подсказку
+        alert("Текст заказа скопирован! Сейчас откроется чат в MAX. Просто вставьте текст и отправьте.");
+        
+        // 3. Открываем твой профиль в MAX
+        // ВСТАВЬ СЮДА СВОЮ ССЫЛКУ ИЗ MAX (например, https://max.ru/u/xxxxx)
+        window.open("https://max.ru/u/f9LHodD0cOJr3MG7RVWrLvLFaqTAvKBghiTMNx2MlJxPb638XPWiVppUeQk", "_blank");
+    }).catch(err => {
+        alert("Не удалось скопировать текст. Пожалуйста, выделите и скопируйте заказ вручную.");
+        console.error("Ошибка копирования: ", err);
+    });
+}
 
         renderMenu();
         updateCartUI();
